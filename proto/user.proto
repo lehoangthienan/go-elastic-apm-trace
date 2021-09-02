@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "github.com/lehoangthienan/proto";
+
+message User {
+  string name = 1;
+}
+
+message UserReq {
+	int32 id = 1;
+}
+
+service UserService {
+  rpc SayHello(UserReq) returns (User) {}
+}
