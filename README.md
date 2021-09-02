@@ -9,15 +9,21 @@ make setup
 make init
 ```
 
+## GEN PROTO
+```
+make gen-proto
+```
+
 ## HOW TO START
 ```
 make dev-svc-a
 make dev-svc-b
-curl http://localhost:3000/go
+curl http://localhost:3000/go => test http
+curl http://localhost:3000/go-grpc => test grpc
 ```
 
 
 ## APM CLIENT
 ```
-http://localhost:5601/app/apm/services?rangeFrom=now-10m&rangeTo=now&environment=
+http://localhost:5601/app/apm/services?rangeFrom=now-10m&rangeTo=now&environment= => kibana
 ```
